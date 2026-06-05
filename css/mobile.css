@@ -1,0 +1,751 @@
+/* =========================================
+   MOBILE RESPONSIVE OVERRIDES
+   Desktop-first architecture.
+   All rules strictly inside media queries.
+   No desktop CSS is modified.
+   ========================================= */
+
+/* -----------------------------------------
+   TABLET BREAKPOINT (max-width: 992px)
+   ----------------------------------------- */
+@media (max-width: 992px) {
+
+    /* Sub-page Minimal Headers */
+    .minimal-header {
+        padding: 15px 25px;
+    }
+
+    /* Sub-page Banners */
+    .detail-banner h1,
+    .about-banner h1,
+    .projects-banner h1,
+    .contact-banner h1 {
+        font-size: 2.8rem;
+    }
+
+    /* Sub-page Grids */
+    .render-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-image-wrapper {
+        margin-top: 30px;
+    }
+
+    .experience-box {
+        right: 20px;
+        bottom: -20px;
+    }
+
+    .vm-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* -----------------------------------------
+   MOBILE BREAKPOINT (max-width: 768px)
+   ----------------------------------------- */
+@media (max-width: 768px) {
+
+    /* --- SHARED COMPONENTS --- */
+
+    /* Minimal Header (Sub-pages) */
+    .minimal-header {
+        padding: 12px 15px;
+    }
+
+    .minimal-header .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .back-link {
+        font-size: 0.85rem;
+    }
+
+    /* Sub-page Banners */
+    .detail-banner {
+        height: auto;
+        min-height: 280px;
+        padding-top: 70px;
+        padding-bottom: 40px;
+        background-position: center top;
+    }
+
+    .about-banner {
+        height: auto;
+        min-height: 280px;
+        padding-top: 70px;
+        padding-bottom: 40px;
+        background-attachment: scroll;
+    }
+
+    .projects-banner {
+        height: auto;
+        min-height: 250px;
+        padding-top: 70px;
+        padding-bottom: 40px;
+    }
+
+    .contact-banner {
+        height: auto;
+        min-height: 250px;
+        padding-top: 70px;
+        padding-bottom: 40px;
+    }
+
+    .detail-banner h1,
+    .about-banner h1 {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+
+    .projects-banner h1,
+    .contact-banner h1 {
+        font-size: 2.2rem;
+    }
+
+    .detail-banner p,
+    .about-banner p,
+    .projects-banner p,
+    .contact-banner p {
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
+        font-weight: 500;
+    }
+
+    .detail-content p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+    /* Sub-page Content Sections */
+    .detail-content {
+        padding: 50px 0;
+    }
+
+    .portfolio-section {
+        padding: 50px 15px;
+    }
+
+    .contact-section {
+        padding: 50px 15px;
+    }
+
+    /* Fix iOS background-attachment: fixed issues */
+    .detail-banner,
+    .about-banner {
+        background-attachment: scroll;
+    }
+
+    /* Buttons — full width on mobile */
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* --- HEADER & LOGO ON MOBILE --- */
+
+    /* Make logo smaller so it doesn't overlap hero content */
+    .logo-img {
+        height: 55px;
+    }
+
+    #header.scrolled .logo-img {
+        height: 45px;
+    }
+
+    /* Tighter header padding */
+    #header .container {
+        padding: 0 15px;
+    }
+
+    /* --- HERO SECTION ON MOBILE --- */
+
+    .hero {
+        min-height: auto;
+        height: auto;
+        padding: 100px 0 60px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding-top: 20px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        line-height: 1.2;
+    }
+
+    .hero .subtitle {
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 12px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+        max-width: 100%;
+    }
+
+    .hero .highlight {
+        font-size: inherit;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .hero-buttons .btn {
+        padding: 14px 20px;
+    }
+
+    .hero-right-panel {
+        flex: none;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .glass-panel {
+        padding: 20px;
+    }
+
+    .clock-display span {
+        font-size: 1.8rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+
+    /* About section — button row inside about-content */
+    .about-content>div[style] {
+        flex-direction: column;
+    }
+
+    /* Experience badge — don't overflow the slider container */
+    .experience-badge.modern {
+        width: 100px;
+        height: 100px;
+        padding: 12px;
+        bottom: -10px;
+        right: -10px;
+    }
+
+    .experience-badge.modern .years {
+        font-size: 2.5rem;
+    }
+
+    .experience-badge.modern .text {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    /* About slider height */
+    .about-slider {
+        height: 300px;
+    }
+
+    /* Section subtitle adjustment */
+    .section-subtitle {
+        font-size: 0.8rem;
+        padding-left: 35px;
+    }
+
+    .section-subtitle::before {
+        width: 22px;
+    }
+
+    /* Brand carousel — show 1 item on mobile instead of 2 */
+    /* (components.css already sets 50%, override to 100% for very small screens) */
+
+    /* Slider buttons */
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    /* --- SERVICES SECTION (index.html) --- */
+    .services-grid {
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 25px;
+    }
+
+    .service-icon {
+        font-size: 2.2rem;
+        margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+
+    .service-card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    /* Fixed overlay text size */
+    .service-overlay p {
+        font-size: 0.85rem;
+    }
+
+    /* --- GLOBAL MOBILE TEXT SAFETY --- */
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    /* --- HAKKIMIZDA (kurumsal) PAGE --- */
+
+    /* Intro section */
+    .intro-section {
+        padding: 60px 0;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .intro-text h2 {
+        font-size: 1.6rem;
+    }
+
+    .intro-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .intro-image-wrapper {
+        margin-top: 20px;
+    }
+
+    .experience-box {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-top: 20px;
+        display: inline-block;
+    }
+
+    .experience-box .number {
+        font-size: 2.5rem;
+    }
+
+    /* Vision & Mission */
+    .vission-mission-section {
+        padding: 60px 0;
+    }
+
+    .vm-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .vm-card {
+        padding: 30px 20px;
+    }
+
+    .vm-icon {
+        font-size: 2rem;
+    }
+
+    .vm-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .vm-card p {
+        font-size: 0.95rem;
+    }
+
+    /* Core Values */
+    .values-section {
+        padding: 60px 0;
+    }
+
+    .values-title {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+
+    .value-box {
+        padding: 30px 20px;
+    }
+
+    .value-box h4 {
+        font-size: 1.1rem;
+    }
+
+    .value-box p {
+        font-size: 0.9rem;
+    }
+
+
+
+    /* --- MIMARI PROJELENDIRME PAGE --- */
+    .render-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .render-card {
+        height: auto;
+        min-height: 250px;
+    }
+
+    .render-info {
+        padding: 20px;
+    }
+
+    .render-info h3 {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+
+    .render-category {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    .render-materials p {
+        font-size: 0.85rem;
+    }
+
+    /* --- GENEL MUTEAHHITLIK PAGE --- */
+    .process-grid {
+        gap: 30px;
+    }
+
+    .process-step {
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .process-step:not(:last-child)::after {
+        display: none;
+    }
+
+    .step-content {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .step-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        margin: 0 auto 10px;
+    }
+
+    .step-content h3 {
+        font-size: 1.15rem;
+        margin-bottom: 10px;
+    }
+
+    .step-content p {
+        font-size: 0.95rem;
+    }
+
+    .step-list {
+        display: inline-block;
+        text-align: left;
+        font-size: 0.9rem;
+    }
+
+    /* --- TADILAT & RESTORASYON PAGE --- */
+
+    .accordion-inner {
+        flex-direction: column;
+    }
+
+    .accordion-img {
+        flex: none;
+        width: 100%;
+        height: auto;
+    }
+
+    .accordion-header {
+        font-size: 1.2rem;
+        padding: 20px 0;
+    }
+
+    /* --- KENTSEL DÖNÜŞÜM PAGE --- */
+    .split-view-container {
+        height: 250px;
+        margin: 30px 0;
+    }
+
+    .split-handle-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .info-box {
+        padding: 15px 10px;
+    }
+
+    .info-box i {
+        font-size: 1.3rem;
+        margin-bottom: 8px;
+    }
+
+    .info-box h4 {
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    .info-box p {
+        font-size: 0.9rem;
+    }
+
+    .lead-text {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+
+
+    /* --- ILETISIM PAGE --- */
+
+    .contact-form-wrapper {
+        padding: 30px 20px;
+    }
+
+    .contact-form-wrapper h2 {
+        font-size: 1.5rem;
+    }
+
+    .map-section {
+        height: 300px;
+    }
+
+    .info-block {
+        padding: 20px;
+    }
+
+    .hr-block {
+        padding: 30px 20px;
+    }
+
+    .hr-block h3 {
+        font-size: 1.3rem;
+    }
+}
+
+/* -----------------------------------------
+   SMALL PHONE BREAKPOINT (max-width: 480px)
+   ----------------------------------------- */
+@media (max-width: 480px) {
+
+    /* Even tighter spacing */
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Hero title sizing */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .subtitle {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    /* Clock panel */
+    .clock-display span {
+        font-size: 1.6rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    /* Section titles */
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+
+
+    /* Sub-page banners even smaller */
+    .detail-banner h1,
+    .about-banner h1,
+    .projects-banner h1,
+    .contact-banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .detail-banner p,
+    .about-banner p,
+    .projects-banner p,
+    .contact-banner p {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+    }
+
+    .detail-content {
+        padding: 40px 0;
+    }
+
+    .detail-content p {
+        font-size: 0.95rem;
+    }
+
+    /* --- SERVICES SECTION (index.html) --- */
+    .service-card {
+        padding: 20px;
+    }
+
+    .service-icon {
+        font-size: 2rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-card p {
+        font-size: 0.9rem;
+    }
+
+    /* Info grid — single column on very small screens */
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Split view — smaller */
+    .split-view-container {
+        height: 220px;
+    }
+
+    /* About slider */
+    .about-slider {
+        height: 220px;
+    }
+
+    /* Experience badge */
+    .experience-badge.modern {
+        width: 80px;
+        height: 80px;
+        padding: 8px;
+    }
+
+    .experience-badge.modern .years {
+        font-size: 2rem;
+    }
+
+    .experience-badge.modern .text {
+        font-size: 0.65rem;
+    }
+
+    /* Footer bottom text */
+    .footer-bottom {
+        font-size: 0.8rem;
+    }
+
+    /* Render cards */
+    .render-card {
+        height: 250px;
+    }
+
+    .render-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .render-category {
+        font-size: 0.75rem;
+    }
+
+
+
+    /* Accordion */
+    .accordion-header {
+        font-size: 1.05rem;
+    }
+
+    /* Process steps */
+    .step-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .step-content p {
+        font-size: 0.95rem;
+    }
+
+    .step-number {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    /* Render Cards */
+    .render-card {
+        min-height: 200px;
+    }
+
+    .render-info {
+        padding: 15px;
+    }
+
+    .render-info h3 {
+        font-size: 1.15rem;
+    }
+
+    /* Info Boxes */
+    .info-box {
+        padding: 12px 8px;
+    }
+
+    .info-box i {
+        font-size: 1.2rem;
+    }
+}

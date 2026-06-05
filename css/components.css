@@ -1,0 +1,679 @@
+/* =========================================
+   FLOATING SOCIALS STACK
+   ========================================= */
+.floating-socials {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    /* Moved to the right side */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
+
+.social-float {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary);
+    color: #FFF;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 26px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+
+.social-float.whatsapp {
+    background-color: var(--whatsapp);
+}
+
+.social-float.whatsapp:hover {
+    background-color: var(--whatsapp-dark);
+}
+
+.social-float.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-float.instagram:hover {
+    filter: brightness(1.1);
+}
+
+.social-float.facebook {
+    background-color: #1877F2;
+}
+
+.social-float.facebook:hover {
+    background-color: #166FE5;
+}
+
+.social-float:hover {
+    transform: scale(1.1) translateX(-5px);
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Tooltip on hover (appearing on the left side since buttons are on the right) */
+.floating-socials .tooltip-text {
+    visibility: hidden;
+    background-color: var(--secondary);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 15px;
+    position: absolute;
+    z-index: 1;
+    right: 120%;
+    /* Position to the left of the button */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-family: var(--font-main);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow pointing right */
+.floating-socials .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    /* Arrow on the right side of the tooltip */
+    transform: translateY(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--secondary);
+}
+
+.social-float:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-main);
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+.btn-secondary:hover {
+    background-color: #333;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--secondary);
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-image: url('https://images.unsplash.com/photo-1541888085916-3e4b4fce2dc7?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: var(--white);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(26, 26, 26, 0.9) 0%, rgba(26, 26, 26, 0.6) 50%, rgba(26, 26, 26, 0.4) 100%);
+    z-index: 1;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-content {
+    max-width: 650px;
+    flex: 1;
+}
+
+.hero-right-panel {
+    flex: 0 0 350px;
+    display: flex;
+    justify-content: flex-end;
+    animation: fadeInUp 1s ease 0.6s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    color: var(--white);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.clock-display {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.clock-display span {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    line-height: 1;
+}
+
+.clock-display small {
+    display: block;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero .subtitle {
+    display: inline-block;
+    color: #e6ac00;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease 0.2s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    color: var(--white);
+    margin-bottom: 25px;
+    animation: fadeInUp 1s ease 0.4s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.hero .highlight {
+    color: #fdbd00;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 40px;
+    max-width: 600px;
+    animation: fadeInUp 1s ease 0.6s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    animation: fadeInUp 1s ease 0.8s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    animation: bounce 2s infinite;
+}
+
+.scroll-down a {
+    color: var(--white);
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* =========================================
+   ABOUT SECTION
+   ========================================= */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-slider-container {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+}
+
+.about-slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* Fixed height for image area */
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.about-slider .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 5s linear;
+    transform: scale(1);
+}
+
+.about-slider .slide.active {
+    opacity: 1;
+    transform: scale(1.05);
+    /* Slight zoom effect on active */
+}
+
+/* Modernized Experience Badge */
+.experience-badge.modern {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: linear-gradient(135deg, var(--secondary) 0%, #000 100%);
+    color: var(--white);
+    padding: 20px;
+    border-radius: 8px;
+    /* Square modern look instead of circle */
+    text-align: center;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    /* Strong dark modern shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 140px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10;
+}
+
+.experience-badge.modern .years {
+    font-size: 3.5rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    line-height: 1;
+    color: #e6ac00;
+    /* Gold accent */
+}
+
+.experience-badge.modern .text {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+/* Shifts the text panel more to the right */
+.about-content.shifted {
+    padding-left: 30px;
+}
+
+.about-content p {
+    color: var(--text-light);
+    margin-bottom: 25px;
+    font-size: 1.05rem;
+}
+
+.about-list {
+    margin-bottom: 25px;
+}
+
+.about-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--secondary);
+    font-weight: 500;
+}
+
+.about-list li i {
+    color: var(--primary);
+    background-color: rgba(37, 99, 235, 0.1);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 0.8rem;
+}
+
+/* =========================================
+   SERVICES SECTION
+   ========================================= */
+/* Added Background Image for Services */
+#services {
+    position: relative;
+}
+
+#services::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../img/evlerdenbitanesidaha.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.15;
+    /* Increased opacity */
+    z-index: 0;
+}
+
+#services .container {
+    position: relative;
+    z-index: 1;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Service Card Changes: Premium Luxury Redesign */
+.service-card {
+    background-color: var(--white);
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Very subtle border */
+    border-bottom: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    /* For styling the arrow context */
+    flex-direction: column;
+}
+
+.service-card-arrow {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    transition: var(--transition);
+    opacity: 0.5;
+}
+
+.service-card:hover {
+    transform: translateY(-12px);
+    /* Slightly stronger lift */
+    box-shadow: var(--shadow-hover);
+    /* Premium tinted shadow */
+    border-bottom-color: var(--primary);
+}
+
+.service-card:hover .service-card-arrow {
+    color: var(--primary);
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 25px;
+    transition: var(--transition);
+}
+
+.service-card h3 {
+    font-family: var(--font-main);
+    font-size: 1.35rem;
+    /* Slightly larger for premium feel */
+    margin-bottom: 15px;
+    color: var(--primary);
+    /* Deep Navy Title */
+    font-weight: 700;
+}
+
+.service-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Service Overlay Effect */
+.service-overlay {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 31, 68, 0.95);
+    /* var(--primary) with opacity */
+    color: var(--white);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: top 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    /* Faster, smoother ease */
+    z-index: 2;
+}
+
+.service-card:hover .service-overlay {
+    top: 0;
+}
+
+.service-overlay p {
+    color: var(--white);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   MEDIA QUERIES (Mobile Responsiveness)
+   ========================================= */
+
+@media (max-width: 992px) {
+
+    /* About Slider adjustments */
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-slider {
+        height: 400px;
+    }
+
+    .about-content.shifted {
+        padding-left: 0;
+        margin-top: 40px;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Hero Section Mobile */
+    .hero-container {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 40px;
+        padding-top: 60px;
+    }
+
+    .hero-content {
+        margin: 0 auto;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-right-panel {
+        flex: none;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .glass-panel {
+        padding: 20px;
+    }
+
+    .clock-display span {
+        font-size: 2rem;
+    }
+
+    /* Brand Carousel Mobile */
+    .brand-item {
+        flex: 0 0 50%;
+        /* Shows 2 items on mobile */
+    }
+
+    .brand-logo-box {
+        height: 90px;
+        font-size: 1.2rem;
+    }
+
+    /* Floating Socials Mobile - Make them smaller and out of the way */
+    .floating-socials {
+        bottom: 20px;
+        right: 20px;
+        gap: 10px;
+    }
+
+    .social-float {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    .floating-socials .tooltip-text {
+        display: none;
+        /* Hide tooltips on mobile */
+    }
+
+    /* Services & Projects Grid Adjustments */
+    .services-grid,
+    .projects-gallery,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}

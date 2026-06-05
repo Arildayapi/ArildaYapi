@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda | ARİLDA YAPI</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS (Relative Paths) -->
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <style>
+        .about-page {
+            background-color: var(--bg-light);
+        }
+
+        .minimal-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 50px;
+            background: rgba(10, 31, 68, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .minimal-header .logo-text {
+            color: var(--white);
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .back-link {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        .about-banner {
+            height: 70vh;
+            min-height: 500px;
+            background-image: linear-gradient(to right, rgba(10, 31, 68, 0.9), rgba(28, 28, 28, 0.7)), url('../img/evlerdenbitanesidaha.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+        }
+
+        .about-banner h1 {
+            color: var(--white);
+            font-size: 4rem;
+            margin-bottom: 15px;
+            line-height: 1.1;
+        }
+
+        .about-banner p {
+            color: var(--accent);
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* Introduction Content */
+        .intro-section {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .intro-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-family: var(--font-heading);
+        }
+
+        .intro-text p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .intro-image-wrapper {
+            position: relative;
+        }
+
+        .intro-image {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .experience-box {
+            position: absolute;
+            bottom: -30px;
+            right: -30px;
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+        }
+
+        .experience-box .number {
+            display: block;
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+
+        /* Vision & Mission */
+        .vission-mission-section {
+            padding: 100px 0;
+            background-color: var(--bg-light);
+        }
+
+        .vm-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .vm-card {
+            background: var(--white);
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            border-top: 4px solid transparent;
+        }
+
+        .vm-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+            border-top-color: var(--primary);
+        }
+
+        .vm-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 25px;
+        }
+
+        .vm-card h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-family: var(--font-heading);
+        }
+
+        .vm-card p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        /* Core Values */
+        .values-section {
+            padding: 100px 0;
+            background-color: var(--secondary);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .values-title {
+            color: var(--white);
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            font-family: var(--font-heading);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .value-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 40px 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+        .value-box:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+            border-color: rgba(245, 158, 11, 0.3);
+            /* Accent tint */
+        }
+
+        .value-box i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        .value-box h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--white);
+        }
+
+        .value-box p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Scroll Adjustments */
+        #hakkimizda,
+        #vizyon-misyon,
+        #degerlerimiz {
+            scroll-margin-top: 100px;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/mobile.css">
+</head>
+
+<body class="about-page">
+
+    <!-- Minimal Header -->
+    <header class="minimal-header">
+        <a href="../index.html" class="logo-text">ARİLDA YAPI</a>
+        <a href="../index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Ana Sayfaya Dön</a>
+    </header>
+
+    <!-- Premium Banner -->
+    <section class="about-banner">
+        <div class="container">
+            <div class="reveal">
+                <p>Kurumsal Kimliğimiz</p>
+                <h1>Güvenle İnşa Edilen Bir Gelecek</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are / Intro -->
+    <section class="intro-section" id="hakkimizda">
+        <div class="container intro-grid">
+            <div class="intro-text reveal">
+                <h2>Sağlam Temeller, Güçlü Yarınlar</h2>
+                <p>1994 yılında Duran Arslan tarafından temelleri atılan Arilda Yapı, Kocaeli’de gerçekleştirdiği
+                    200’den fazla başarılı proje ile sektöründe güvenin ve kalitenin simgesi olmuştur. Tüpraş, Mutlu
+                    Akü, Ford Otosan ve Marmara Tersanesi gibi Türkiye sanayisinin öncü kuruluşlarına 30 yılı aşkın
+                    süredir kusursuz hizmet sunarak uzun soluklu iş birliklerine imza attık.</p>
+                <p>2023 itibarıyla Ege Bölgesi’nde de büyümemizi sürdürürken; sürdürülebilirlik, estetik ve çevreci
+                    yaklaşımları merkezine alan projelerimizle geleceğin yaşam alanlarını inşa etmeye devam ediyoruz.
+                </p>
+            </div>
+            <div class="intro-image-wrapper reveal">
+                <img src="../img/konutarilda.jpeg" alt="Mimari Yapı" class="intro-image">
+                <div class="experience-box">
+                    <span class="number">32</span>
+                    <span>Yıllık<br>Sektör Kurmaylığı</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="vission-mission-section" id="vizyon-misyon">
+        <div class="container vm-grid">
+            <div class="vm-card reveal">
+                <i class="fa-solid fa-compass vm-icon"></i>
+                <h3>Vizyonumuz</h3>
+                <p>Ulusal ve uluslararası ölçekte itibarı, zarafeti ve üstün hizmet kalitesiyle referans gösterilen;
+                    güçlü kurumsal kimliği ve sürdürülebilir başarı anlayışıyla sektöründe lider ve belirleyici bir
+                    konuma ulaşmak.</p>
+            </div>
+            <div class="vm-card reveal">
+                <i class="fa-solid fa-bullseye vm-icon"></i>
+                <h3>Misyonumuz</h3>
+                <p>Müşterilerimize yenilikçi, güvenilir ve sürdürülebilir çözümler sunarak beklentilerinin ötesinde
+                    değer üretmek; kalite, etik ve şeffaflık ilkelerimizden ödün vermeden sürekli gelişimi esas
+                    almaktır.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="values-section" id="degerlerimiz">
+        <div class="container">
+            <h2 class="values-title reveal">Temel Değerlerimiz</h2>
+            <div class="values-grid">
+                <div class="value-box reveal">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h4>Güvenilirlik</h4>
+                    <p>Söz verdiğimiz taahhütlerin arkasında durur, şeffaf ve dürüst bir yönetim sergileriz.</p>
+                </div>
+                <div class="value-box reveal">
+                    <i class="fa-solid fa-gem"></i>
+                    <h4>Kalite <span style="font-family: var(--font-main);">&</span> Estetik</h4>
+                    <p>En ince detaya kadar malzeme ve işçilik kalitesini üst düzeyde tutarız.</p>
+                </div>
+                <div class="value-box reveal">
+                    <i class="fa-solid fa-leaf"></i>
+                    <h4>Sürdürülebilirlik</h4>
+                    <p>Doğaya saygılı malzemeler ve enerji verimliliği yüksek mimari konseptler benimseriz.</p>
+                </div>
+                <div class="value-box reveal">
+                    <i class="fa-solid fa-users-gear"></i>
+                    <h4>İnsan Odaklılık</h4>
+                    <p>Hem müşterilerimizin hem de çalışanlarımızın sağlık, güven ve mutluluğunu gözetiriz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- CTA Section -->
+    <section class="text-center" style="padding: 100px 0; background-color: var(--bg-light);">
+        <div class="container reveal">
+            <h2
+                style="font-size: 2.2rem; color: var(--primary); margin-bottom: 20px; font-family: var(--font-heading);">
+                Bizimle Tanışmak İster Misiniz?</h2>
+            <p
+                style="color: var(--text-light); font-size: 1.1rem; margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Projeleriniz ve yatırım fikirleriniz için uzman ekibimizle kahve eşliğinde detaylı bir görüşme
+                planlayın.</p>
+            <a href="https://wa.me/905431054166?text=Merhaba,%20web%20sitenizden%20ulaşıyorum.%20Bilgi%20almak%20istiyorum."
+                class="btn btn-primary" style="padding: 15px 40px; font-size: 1.1rem;" target="_blank"
+                rel="noopener noreferrer">İletişime Geçin</a>
+        </div>
+    </section>
+
+    <!-- Footer Partial -->
+    <footer
+        style="background-color: var(--secondary); padding: 40px 0; text-align: center; color: rgba(255,255,255,0.5); font-size: 0.9rem;">
+        <div class="container">
+            <p>&copy; 2023 ARİLDA YAPI. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Script for Reveal animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            revealElements.forEach(el => revealObserver.observe(el));
+        });
+    </script>
+</body>
+
+</html>

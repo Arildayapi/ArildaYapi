@@ -1,0 +1,41 @@
+/* =========================================
+   VARIABLES
+   ========================================= */
+:root {
+    /* Premium Color Palette */
+    --primary: #0a1f44;
+    /* Deep Navy / Premium Blue */
+    --primary-dark: #051024;
+    /* Darker shade for hovers */
+    --secondary: #1c1c1c;
+    /* Anthracite / Charcoal */
+    --accent: #f59e0b;
+    /* Soft Gold / Orange for accents */
+
+    --text-dark: #2d2d2d;
+    --text-light: #6b7280;
+    --text-muted: #9ca3af;
+
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+
+    /* WhatsApp Color */
+    --whatsapp: #25D366;
+    --whatsapp-dark: #128C7E;
+
+    /* Typography */
+    --font-main: 'Inter', 'Outfit', sans-serif;
+    --font-heading: 'Playfair Display', serif;
+
+    /* Transitions & Dynamics */
+    --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    --transition-fast: all 0.2s ease;
+    --transition-slow: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+
+    /* Luxury Shadows */
+    --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.12);
+    --shadow-hover: 0 25px 50px rgba(10, 31, 68, 0.15);
+    /* Tinted premium shadow */
+}

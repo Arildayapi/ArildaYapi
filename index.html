@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARİLDA YAPI | Geleceğin Mimarı</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/mobile.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="img/arilda_logo.png" alt="ARİLDA YAPI Logo" class="logo-img">
+            </a>
+
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="active">Ana Sayfa</a></li>
+
+                    <li class="dropdown">
+                        <a href="kurumsal/hakkimizda.html">Kurumsal <i class="fa-solid fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 5px;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="kurumsal/hakkimizda.html#hakkimizda">Hakkımızda</a></li>
+                            <li><a href="kurumsal/hakkimizda.html#vizyon-misyon">Vizyon & Misyon</a></li>
+                            <li><a href="kurumsal/hakkimizda.html#degerlerimiz">Temel Değerlerimiz</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#services">Hizmetlerimiz <i class="fa-solid fa-chevron-down"
+                                style="font-size: 0.8rem; margin-left: 5px;"></i></a>
+                        <ul class="dropdown-content">
+                            <li><a href="#services">Betonarme Yapılar</a></li>
+                            <li><a href="#services">Ağır Çelik Yapılar</a></li>
+                            <li><a href="#services">Prefabrik Yapılar</a></li>
+                            <li><a href="#services">Taş Evler</a></li>
+                        </ul>
+                    </li>
+
+
+
+                    <li><a href="https://wa.me/905431054166?text=Merhaba,%20web%20sitenizden%20ulaşıyorum.%20Bilgi%20almak%20istiyorum."
+                            target="_blank" rel="noopener noreferrer">İletişim</a></li>
+                </ul>
+            </nav>
+
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="subtitle">Güvenle İnşa Ediyoruz</span>
+                <h1>Güvenle başlar,<br><span class="highlight">sağlamlıkla tamamlarız</span> </h1>
+                <p>Modern mimari ve sağlam mühendislik çözümleriyle hayallerinizdeki projeleri gerçeğe dönüştürüyoruz.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">Hizmetlerimizi İnceleyin</a>
+                    <a href="https://wa.me/905431054166?text=Merhaba,%20web%20sitenizden%20ulaşıyorum.%20Bilgi%20almak%20istiyorum."
+                        class="btn btn-outline" target="_blank" rel="noopener noreferrer">Bize Ulaşın</a>
+                </div>
+            </div>
+
+            <div class="hero-right-panel">
+                <div class="glass-panel text-center">
+                    <div class="clock-display">
+                        <span id="currentTime">00:00:00</span>
+                        <small id="currentDate">01 Ocak 2026</small>
+                    </div>
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="243">243</span>
+                            <span class="stat-label">Teslim Edilen Projeler</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="12">12</span>
+                            <span class="stat-label">Devam Edenler Projeler</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#about"><i class="fa-solid fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container about-container">
+            <div class="about-slider-container">
+                <div class="about-slider">
+                    <img src="img/konutarilda.jpeg" alt="ARİLDA YAPI" class="slide active">
+                    <img src="img/birdigerevdaha.jpeg" alt="ARİLDA YAPI" class="slide">
+                    <img src="img/evlerdenbitanesidaha.jpeg" alt="ARİLDA YAPI" class="slide">
+                    <img src="img/beyazev.jpeg" alt="ARİLDA YAPI" class="slide">
+                </div>
+                <div class="experience-badge modern">
+                    <span class="years">32</span>
+                    <span class="text">Yıllık<br>Tecrübe</span>
+                </div>
+            </div>
+
+            <div class="about-content shifted">
+                <span class="section-subtitle">Hakkımızda</span>
+                <h2 class="section-title">Güçlü Temeller, <br>Güvenilir Gelecek!</h2>
+                <p>1994 yılından bu yana, yüksek kalite standartlarımız ve yenilikçi vizyonumuzla inşaat sektöründe öncü
+                    olmaya devam ediyoruz. Her yatırımın bir yaşam alanı, her yapının bir miras olduğuna inanıyoruz.</p>
+
+                <ul class="about-list">
+                    <li><i class="fa-solid fa-check"></i> Zamanında Teslimat</li>
+                    <li><i class="fa-solid fa-check"></i> Üstün Malzeme Kalitesi</li>
+                    <li><i class="fa-solid fa-check"></i> Alanında Uzman Ekip</li>
+                    <li><i class="fa-solid fa-check"></i> Çevre Dostu Yaklaşımlar</li>
+                    <li><i class="fa-solid fa-check"></i> Bütçe Dostu Yapılar</li>
+                </ul>
+
+                <p>Müşteri memnuniyetini her şeyin önünde tutarak, çağdaş yaşamın gereksinimlerine uygun, yenilikçi ve
+                    estetik projeler üretiyoruz. Temel atımından anahtar teslimine kadar geçen her süreçte, detaylara
+                    verdiğimiz önem ve yüksek mühendislik standartlarımızla fark yaratıyoruz. Sadece binalar değil,
+                    ailenizle huzurla yaşayacağınız güvenli ve kalıcı yaşam alanları inşa ediyoruz.</p>
+
+                <div style="display: flex; gap: 15px; margin-top: 1.5rem;">
+                    <a href="kurumsal/hakkimizda.html" class="btn btn-primary">Kurumsal Hikayemiz</a>
+                    <a href="#services" class="btn btn-secondary">Neler Yapıyoruz?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Hizmetlerimiz</span>
+                <h2 class="section-title">Sizin İçin Neler Sunuyoruz?</h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1: Betonarme Yapılar -->
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+                    <h3>Betonarme Yapılar</h3>
+                    <p>Betonarme yapılar, basınç mukavemeti yüksek beton ile çekme kuvvetlerini karşılayan çelik
+                        donatının birlikte çalışmasıyla oluşturulan, modern mimarinin en dayanıklı taşıyıcı sistemidir.
+                    </p>
+                    <a href="https://wa.me/905431054166?text=Merhaba,%20Betonarme%20Yapılar%20hizmetiniz%20hakkında%20bilgi%20almak%20istiyorum."
+                        class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="margin-top: 20px; padding: 10px 20px; font-size: 0.9rem; border-radius: 6px;"><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i>Bilgi Al</a>
+                </div>
+
+                <!-- Service 2: Ağır Çelik Yapılar -->
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-industry"></i></div>
+                    <h3>Ağır Çelik Yapılar</h3>
+                    <p>Ağır çelik yapılar, büyük açıklıkları geçebilen ve çok yüksek katlı binaların inşasında
+                        kullanılan, kesitleri oldukça büyük ve kalın profilli çelik taşıyıcı elemanlardan oluşan
+                        sistemlerdir.</p>
+                    <a href="https://wa.me/905431054166?text=Merhaba,%20Ağır%20Çelik%20Yapılar%20hizmetiniz%20hakkında%20bilgi%20almak%20istiyorum."
+                        class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="margin-top: 20px; padding: 10px 20px; font-size: 0.9rem; border-radius: 6px;"><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i>Bilgi Al</a>
+                </div>
+
+                <!-- Service 3: Prefabrik Yapılar -->
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-cubes"></i></div>
+                    <h3>Prefabrik Yapılar</h3>
+                    <p>Prefabrik yapılar, fabrikada ön üretimi tamamlanmış duvar panelleri, çatı sistemleri ve bağlantı
+                        elemanlarının inşaat sahasına getirilip hızlıca monte edilmesiyle oluşturulan modüler
+                        yapılardır.</p>
+                    <a href="https://wa.me/905431054166?text=Merhaba,%20Prefabrik%20Yapılar%20hizmetiniz%20hakkında%20bilgi%20almak%20istiyorum."
+                        class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="margin-top: 20px; padding: 10px 20px; font-size: 0.9rem; border-radius: 6px;"><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i>Bilgi Al</a>
+                </div>
+
+                <!-- Service 4: Taş Evler -->
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fa-solid fa-house-chimney"></i></div>
+                    <h3>Taş Evler</h3>
+                    <p>Taş evler, doğadan elde edilen doğal taşların uygun bir bağlayıcı harçla örülmesiyle inşa edilen,
+                        yüksek ısı yalıtımı ve estetik görünümüyle öne çıkan geleneksel bir yapı sistemidir.</p>
+                    <a href="https://wa.me/905431054166?text=Merhaba,%20Taş%20Evler%20hizmetiniz%20hakkında%20bilgi%20almak%20istiyorum."
+                        class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="margin-top: 20px; padding: 10px 20px; font-size: 0.9rem; border-radius: 6px;"><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i>Bilgi Al</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transition Bridge Section -->
+    <section id="transition-bridge" class="section" style="padding: 0;">
+        <div
+            style="height: 120px; background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 30%, #000000 60%, #1a1a1a 100%); margin-top: -1px;">
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <footer id="contact" class="footer">
+        <div class="container footer-container">
+            <div class="footer-col about-col">
+                <a href="#" class="logo footer-logo">
+                    <img src="img/arilda_logo.png" alt="ARİLDA YAPI Logo" class="logo-img">
+                </a>
+                <p>Güvenilir, estetik ve sağlam yapılar inşa etmek vizyonuyla, hayallerinize dokunmaya devam ediyoruz.
+                </p>
+            </div>
+
+            <div class="footer-col links-col">
+                <h3>Hızlı Linkler</h3>
+                <ul>
+                    <li><a href="#hero">Ana Sayfa</a></li>
+                    <li><a href="kurumsal/hakkimizda.html#hakkimizda">Hakkımızda</a></li>
+                    <li><a href="kurumsal/hakkimizda.html">Kurumsal Hikayemiz</a></li>
+                    <li><a href="#services">Hizmetlerimiz</a></li>
+                    <li><a href="https://wa.me/905431054166?text=Merhaba,%20web%20sitenizden%20ulaşıyorum.%20Bilgi%20almak%20istiyorum."
+                            target="_blank" rel="noopener noreferrer">Bize Ulaşın</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h3>İletişim</h3>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-map-location-dot"></i>
+                        <p>Ölüdeniz Mahallesi Atatürk Caddesi No:36/3<br>Fethiye, Muğla</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <p><a href="tel:+905431054166">+90 543 105 41 66</a></p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>info@arildayapi.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 ARİLDA YAPI. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed Social Buttons Stack -->
+    <div class="floating-socials">
+        <a href="https://wa.me/905431054166?text=Merhaba,%20web%20sitenizden%20ulaşıyorum.%20Bilgi%20almak%20istiyorum."
+            class="social-float whatsapp" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span class="tooltip-text">WhatsApp</span>
+        </a>
+        <a href="https://instagram.com/arildayapi" class="social-float instagram" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+            <span class="tooltip-text">Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61582846904993" class="social-float facebook" target="_blank"
+            rel="noopener noreferrer">
+            <i class="fa-brands fa-facebook-f"></i>
+            <span class="tooltip-text">Facebook</span>
+        </a>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
